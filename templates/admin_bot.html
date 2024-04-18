@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Admin Bot
+{% endblock title %}
+
+{% block body %}
+<link rel="stylesheet" href="static/post.css" /> 
+<div class="container">
+    <h1>Post Notes</h1>
+    
+    <form method="POST" id="addNoteForm">
+        <input type="text" id="web_url" name="web_url" placeholder="Website Url" required >
+        <button type="submit">Add Note</button>
+    </form>
+</div>
+{% endblock body %}

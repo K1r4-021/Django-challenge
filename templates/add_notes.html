@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Add-Notes
+{% endblock title %}
+
+
+{% block body %}
+<link rel="stylesheet" href="static/post.css" /> 
+<div class="container">
+    <h1>Add Notes</h1>
+    <form method="POST" id="addNoteForm">
+        <input type="text" id="location" name="location" placeholder="Location" value='uploads/' hidden >
+        <input type="text" id="filename" name="filename" placeholder="Filename" required>
+        <textarea id="text" name="text" placeholder="Write your note here" required></textarea>
+        <button type="submit">Add Note</button>
+    </form>
+</div>
+{% endblock body %}
