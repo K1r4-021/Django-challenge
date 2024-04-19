@@ -15,9 +15,8 @@ def add_notes(request):
         if filename == None:
             return HttpResponse("Enter a valid filename")
         if location=="static/" or location=="static":
-            location=location.replace('static','',1)
             return HttpResponse("Trying XSS let me help you\nI am striping something more static")
-            
+        location=location.replace('static','',1)    
         if location == None:
             location = 'uploads/'
         with open(location+filename, 'w') as f:
